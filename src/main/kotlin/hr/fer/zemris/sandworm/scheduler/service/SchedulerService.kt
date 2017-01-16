@@ -52,7 +52,7 @@ class SchedulerService {
 
         val logger = RemoteLogger(scheduledExecution.loggingEndpoint)
         val config = DefaultDockerClientConfig.createDefaultConfigBuilder()
-                .withDockerHost(availableClients.first())
+                .withDockerHost(client)
                 .withRegistryUrl(scheduledExecution.registryUrl)
                 .build()
         val dockerClient = DockerClientBuilder.getInstance(config).build()
