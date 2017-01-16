@@ -1,0 +1,2 @@
+include ':packer'
+project(':packer').projectDir = new File(settingsDir, '../sandworm-packer')
